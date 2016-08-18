@@ -8,3 +8,4 @@
 /spec/reports/
 /tmp/
 .idea/**
+/lib/parasut_ruby_sdk/models
