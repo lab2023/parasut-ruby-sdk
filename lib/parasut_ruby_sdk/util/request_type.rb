@@ -7,6 +7,16 @@ module ParasutRubySdk
       DELETE = 'delete'
       PATCH = 'patch'
     end
+    
+    module Category
+      module Types
+        CONTACT = 'Contact'
+        PRODUCT = 'Product'
+        SALES_INVOICE = 'SalesInvoice'
+        PURCHASE_INVOICE = 'PurchaseInvoice'
+        EXPENSE = 'Expense'
+      end
+    end 
 
     module SalesInvoice
       module ItemTypes
