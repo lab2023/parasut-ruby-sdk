@@ -8,6 +8,13 @@ module ParasutRubySdk
       PATCH = 'patch'
     end
     
+    module Contact
+      module Types
+        PERSON = 'person'
+        COMPANY = 'company'
+      end
+    end
+
     module Category
       module Types
         CONTACT = 'Contact'
