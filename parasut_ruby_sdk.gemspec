@@ -6,8 +6,8 @@ require 'parasut_ruby_sdk/version'
 Gem::Specification.new do |spec|
   spec.name          = 'parasut_ruby_sdk'
   spec.version       = ParasutRubySdk::VERSION
-  spec.authors       = ['hamitturkukaya']
-  spec.email         = ['htkaya90@gmail.com']
+  spec.authors       = ['Lab2023']
+  spec.email         = ['info@lab2023.com']
 
   spec.summary       = %q{Paraşüt SDK}
   spec.description   = %q{Paraşüt SDK}
