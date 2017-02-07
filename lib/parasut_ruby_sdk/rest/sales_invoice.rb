@@ -39,6 +39,10 @@ module ParasutRubySdk
         prepare_request( Util::RequestType::GET, "#{@resource}/#{id}/e_document_type")
       end
 
+      def get_e_invoice_inboxes( vkn )
+        prepare_request( Util::RequestType::GET, "e_invoice_inboxes", {vkn: vkn})
+      end
+
       def create_e_invoice( id, params )
         prepare_request( Util::RequestType::POST, "#{@resource}/#{id}/e_invoice", params)
       end
