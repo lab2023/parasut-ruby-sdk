@@ -27,3 +27,29 @@ config['refresh_token'] = tokens.refresh_token
 # -------------------------------------------------------------
 account = ParasutRubySdk::REST::Account.new(config)
 puts account.all
+
+# v4 only
+p = {
+  data: {
+    id: "",
+    type: "contacts",
+    attributes: {
+      email: "user@email.com",
+      name: "name surname",
+      short_name: "",
+      contact_type: "person",
+      tax_number: "identity_number",
+      tax_office: "",
+      district: "",
+      city: "",
+      address: "address",
+      phone: "phone",
+      is_abroad: true,
+      archived: false,
+      account_type: "customer"
+    },
+    relationships: {}
+  }
+}
+
+contact.create(p)
