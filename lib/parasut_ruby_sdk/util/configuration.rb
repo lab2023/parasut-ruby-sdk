@@ -13,7 +13,7 @@ module ParasutRubySdk
           proxy_user: nil,
           proxy_pass: nil,
           retry_limit: 2,
-          api_version: 'v1',
+          api_version: 'v4',
           company_id: nil,
           client_id: nil,
           client_secret: nil,
