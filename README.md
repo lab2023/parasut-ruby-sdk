@@ -1,8 +1,6 @@
 # Parasut Ruby Sdk
 
-* Last API version is v4
-* [API Documentation - v4](https://apidocs.parasut.com/)
-* [API Documentation - v1](https://api.parasut.com/docs)
+* [API Documentation](https://apidocs.parasut.com/)
 * [Examples](https://github.com/lab2023/parasut-ruby-sdk/tree/develop/examples)
 
 ## Installation
