@@ -123,3 +123,31 @@ p = {
 }
 
 sales_invoice.create(p)
+
+puts sales_invoice.get_e_invoice_inboxes("ID_have_einvoice")
+{
+  "data"=>[
+    {
+      "id"=>"ID",
+      "type"=>"e_invoice_inboxes",
+      "attributes"=>{
+        "created_at"=>"2019-03-13T04:17:38.837Z",
+        "updated_at"=>"2019-03-21T04:26:13.548Z",
+        "vkn"=>"Identity number",
+        "e_invoice_address"=>"urn:mail:defaultpk@example.com",
+        "name"=>"Name",
+        "inbox_type"=>"unknown",
+        "address_registered_at"=>"2019-03-12T11:25:19.000Z",
+        "registered_at"=>"2019-03-12T11:25:39.000Z"
+      },
+      "meta"=>{
+        "created_at"=>"2019-03-13T04:17:38.837Z",
+        "updated_at"=>"2019-03-21T04:26:13.548Z"
+      }
+    }
+  ],
+  "links"=>{}, "meta"=>{"current_page"=>1, "total_pages"=>1, "total_count"=>1, "per_page"=>15}
+}
+
+puts sales_invoice.get_e_invoice_inboxes("ID_have_not_einvoice")
+{"data"=>[], "links"=>{}, "meta"=>{"current_page"=>1, "total_pages"=>0, "total_count"=>0, "per_page"=>15}}
