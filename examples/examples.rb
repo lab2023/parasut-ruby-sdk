@@ -125,6 +125,7 @@ p = {
 sales_invoice.create(p)
 
 puts sales_invoice.get_e_invoice_inboxes("ID_have_einvoice")
+
 {
   "data"=>[
     {
@@ -150,4 +151,17 @@ puts sales_invoice.get_e_invoice_inboxes("ID_have_einvoice")
 }
 
 puts sales_invoice.get_e_invoice_inboxes("ID_have_not_einvoice")
+
 {"data"=>[], "links"=>{}, "meta"=>{"current_page"=>1, "total_pages"=>0, "total_count"=>0, "per_page"=>15}}
+
+# a. Get all invoice
+puts sales_invoice.all
+
+# b. Get specific invoice with active_e_document
+puts sales_invoice.get(INVOICE_ID, {'include': 'active_e_document'})
+
+# c. Get e-document/archive
+puts sales_invoice.get_e_archive(E_DOCUMENT_ID)
+
+# d. Get PDF link
+puts sales_invoice.get_e_archive_pdf(E_DOCUMENT_ID)
