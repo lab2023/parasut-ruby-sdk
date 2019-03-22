@@ -106,7 +106,7 @@ module ParasutRubySdk
           if root_path
             request_path = "#{self.config.host}/#{path}"
           else
-            request_path = "#{self.config.host}/v1/#{self.config.company_id}/#{path}"
+            request_path = "#{self.config.host}/#{self.config.api_version}/#{self.config.company_id}/#{path}"
             params[:access_token] = self.config.access_token
           end
           URI.parse(request_path)

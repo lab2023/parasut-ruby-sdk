@@ -1,6 +1,6 @@
 # Parasut Ruby Sdk
 
-* [API Documentation](https://api.parasut.com/docs)
+* [API Documentation](https://apidocs.parasut.com/)
 * [Examples](https://github.com/lab2023/parasut-ruby-sdk/tree/develop/examples)
 
 ## Installation

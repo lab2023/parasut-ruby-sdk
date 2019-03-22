@@ -11,8 +11,8 @@ module ParasutRubySdk
         prepare_request( Util::RequestType::GET, @resource, params)
       end
 
-      def get( id )
-        prepare_request( Util::RequestType::GET, "#{@resource}/#{id}")
+      def get( id, params = {} )
+        prepare_request( Util::RequestType::GET, "#{@resource}/#{id}", params)
       end
 
       def create( params )
@@ -38,9 +38,9 @@ module ParasutRubySdk
       def get_e_document_type( id )
         prepare_request( Util::RequestType::GET, "#{@resource}/#{id}/e_document_type")
       end
-
+      
       def get_e_invoice_inboxes( vkn )
-        prepare_request( Util::RequestType::GET, "e_invoice_inboxes", {vkn: vkn})
+        prepare_request( Util::RequestType::GET, "e_invoice_inboxes", {'filter[vkn]': vkn})
       end
 
       def create_e_invoice( id, params )
@@ -49,6 +49,14 @@ module ParasutRubySdk
 
       def create_e_archive( id, params )
         prepare_request( Util::RequestType::POST, "#{@resource}/#{id}/e_archive", params)
+      end
+
+      def get_e_archive( id, params = {} )
+        prepare_request( Util::RequestType::GET, "e_archives/#{id}", params)
+      end
+
+      def get_e_archive_pdf( id, params = {} )
+        prepare_request( Util::RequestType::GET, "e_archives/#{id}/pdf", params)
       end
 
       def get_e_document_status( id )
