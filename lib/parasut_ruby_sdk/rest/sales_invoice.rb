@@ -46,8 +46,8 @@ module ParasutRubySdk
         prepare_request(Util::RequestType::POST, "#{@resource}/#{id}/e_invoice", params)
       end
 
-      def create_e_archive(id, params)
-        prepare_request(Util::RequestType::POST, "#{@resource}/#{id}/e_archive", params)
+      def create_e_archive(params)
+        prepare_request( Util::RequestType::POST, "e_archives", params)
       end
 
       def get_e_archive(id, params = {})
@@ -59,7 +59,7 @@ module ParasutRubySdk
       end
 
       def get_e_document_status(id)
-        prepare_request(Util::RequestType::GET, "#{@resource}/#{id}/e_document_status")
+        prepare_request(Util::RequestType::GET, "trackable_jobs/#{id}")
       end
     end
   end
