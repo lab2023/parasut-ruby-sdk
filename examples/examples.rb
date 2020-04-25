@@ -147,3 +147,41 @@ params = {
   }
 }
 puts sales_invoice.create(params)
+
+# Create a e-Archive
+params = {
+  data: {    
+    type: "e_archives",
+    attributes: {     
+      vat_exemption_reason_code: "VAT_EXEMPTION_REASON_CODE",
+      vat_exemption_reason: "VAT_EXEMPTION_REASON",
+      internet_sale: {
+        url: "https://example.com/",
+        payment_type: "KREDIKARTI/BANKAKARTI",
+        payment_platform: "Akbank 3d_pay_hosting",
+        payment_date: "2019-03-24"
+      },
+      shipment: {}
+    },
+    relationships: {
+      sales_invoice: {
+        data: {
+          id: "SALES_INVOICE_ID",
+          type: "sales_invoices"
+        }
+      }
+    }
+  }
+}
+puts sales_invoice.create_e_archive(params)
+
+# Get e-document status
+h = sales_invoice.get_e_document_status("TRACKABLE_JOBS_ID")
+puts h["data"]["attributes"]["status"] == "done"
+
+# Get e-archive
+puts sales_invoice.get(SALES_INVOICE_ID, {'include': 'active_e_document'})
+
+# Get PDF link
+h = sales_invoice.get_e_archive_pdf(SALES_INVOICE_ID)
+puts h["data"]["attributes"]["url"]
