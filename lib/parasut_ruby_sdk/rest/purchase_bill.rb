@@ -1,16 +1,16 @@
 module ParasutRubySdk
   module REST
-    class Contact < BaseRequest
+    class PurchaseBill < BaseRequest
       def initialize(*args)
         super(*args)
-        @resource = 'contacts'
+        @resource = 'purchase_bills'
       end
 
       def all(params = {})
         prepare_request(Util::RequestType::GET, @resource, params)
       end
 
-      def get(id, params)
+      def get(id, params = {})
         prepare_request(Util::RequestType::GET, "#{@resource}/#{id}", params)
       end
 
@@ -24,14 +24,6 @@ module ParasutRubySdk
 
       def delete(id)
         prepare_request(Util::RequestType::DELETE, "#{@resource}/#{id}")
-      end
-
-      def outstanding_payments(id)
-        prepare_request(Util::RequestType::GET, "#{@resource}/#{id}/outstanding_payments")
-      end
-
-      def past_transactions(id)
-        prepare_request(Util::RequestType::GET, "#{@resource}/#{id}/past_transactions")
       end
     end
   end

@@ -27,6 +27,10 @@ module ParasutRubySdk
         ParasutRubySdk::REST::SalesInvoice.new(@args)
       end
 
+      def purchase_bills
+        ParasutRubySdk::REST::PurchaseBill.new(@args)
+      end
+
     end
   end
 end

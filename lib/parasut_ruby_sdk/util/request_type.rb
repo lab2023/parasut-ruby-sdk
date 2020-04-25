@@ -22,6 +22,7 @@ module ParasutRubySdk
         SALES_INVOICE = 'SalesInvoice'
         PURCHASE_INVOICE = 'PurchaseInvoice'
         EXPENSE = 'Expense'
+        PURCHASE_BILL = 'PurchaseBill'
       end
     end 
 
@@ -61,6 +62,9 @@ module ParasutRubySdk
         AGENT       = 'ODEMEARACISI'
         OTHER       = 'DIGER'
       end
+    end
+
+    module PurchaseBill
     end
 
   end
