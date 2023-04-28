@@ -1,6 +1,6 @@
 module ParasutRubySdk
   module REST
-    class Product < BaseRequest
+    class EArchive < BaseRequest
       def initialize(*args)
         super(*args)
         @resource = 'e_archives'
